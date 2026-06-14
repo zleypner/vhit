@@ -75,34 +75,31 @@ export function EntryGate({ children }: EntryGateProps) {
       const containerRect = container.getBoundingClientRect();
       const buttonRect = button.getBoundingClientRect();
 
-      // Get cursor position
-      let cursorX: number, cursorY: number;
+      // Get cursor X position (Y not needed since we always escape upward)
+      let cursorX: number;
       if ("touches" in e) {
         cursorX = e.touches[0].clientX;
-        cursorY = e.touches[0].clientY;
       } else {
         cursorX = e.clientX;
-        cursorY = e.clientY;
       }
 
-      // Button center in screen coordinates
+      // Button center X coordinate (Y not needed since we always go up)
       const buttonCenterX = buttonRect.left + buttonRect.width / 2;
-      const buttonCenterY = buttonRect.top + buttonRect.height / 2;
 
       // Vector from cursor to button center (escape direction)
       let escapeX = buttonCenterX - cursorX;
-      let escapeY = buttonCenterY - cursorY;
 
-      // Normalize the vector
-      const magnitude = Math.sqrt(escapeX * escapeX + escapeY * escapeY);
-      if (magnitude > 0) {
-        escapeX /= magnitude;
-        escapeY /= magnitude;
+      // Normalize X direction only (Y always goes up)
+      const magnitudeX = Math.abs(escapeX);
+      if (magnitudeX > 0) {
+        escapeX /= magnitudeX;
       } else {
-        // If cursor is exactly on button, escape randomly up or down
-        escapeX = 0;
-        escapeY = Math.random() > 0.5 ? 1 : -1;
+        // If cursor is horizontally centered, pick random X direction
+        escapeX = Math.random() > 0.5 ? 1 : -1;
       }
+
+      // Y always negative (up)
+      const escapeY = -1;
 
       // Distance increases with each attempt
       // Formula: baseDistance + (attempt * increment)
