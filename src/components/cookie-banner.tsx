@@ -13,7 +13,7 @@ export function CookieBanner() {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed right-0 bottom-0 left-0 z-[9998] border-t border-[#1F2937] bg-[#030712]/95 px-4 py-4 backdrop-blur-sm sm:px-6"
+        className="fixed right-0 bottom-0 left-0 z-[10000] border-t border-[#1F2937] bg-[#030712]/95 px-4 py-4 backdrop-blur-sm sm:px-6"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}

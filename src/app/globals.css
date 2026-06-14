@@ -64,8 +64,10 @@
   --vh-blue-light: #93c5fd;
   --vh-blue-glow: rgba(59, 130, 246, 0.35);
 
-  /* Purple - Accent Only (5%) */
-  --vh-purple-accent: #8b5cf6;
+  /* Purple/Magenta - Secondary Accent (10%) */
+  --vh-purple-primary: #7b2dff;
+  --vh-purple-light: #9333ea;
+  --vh-purple-glow: rgba(123, 45, 255, 0.35);
 
   /* Legacy aliases */
   --vh-cta: #3b82f6;
@@ -124,10 +126,41 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #f9fafb 0%, #60a5fa 55%, #2563eb 100%);
+    background: linear-gradient(135deg, #f9fafb 0%, #60a5fa 45%, #7b2dff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #3b82f6 0%, #7b2dff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-gradient-hover {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #3b82f6 0%, #7b2dff 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-gradient-hover:hover::before {
+    opacity: 1;
+  }
+
+  .btn-gradient-hover > * {
+    position: relative;
+    z-index: 1;
   }
 
   .bg-glow {
@@ -182,12 +215,33 @@
   }
 
   .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 640px) {
+    .section-padding {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
   }
 
   .hero-padding {
-    padding-top: 180px;
-    padding-bottom: 140px;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 640px) {
+    .hero-padding {
+      padding-top: 180px;
+      padding-bottom: 140px;
+    }
   }
 }

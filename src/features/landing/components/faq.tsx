@@ -6,29 +6,29 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "¿Cuánto tiempo tarda en verse resultados?",
+    question: "¿Cuánto tiempo toma ver resultados?",
     answer:
-      "Los primeros resultados suelen verse entre el primer y segundo mes, dependiendo del estado actual de tus redes. El crecimiento consistente y sostenido se logra a partir del tercer mes cuando la estrategia está completamente implementada.",
+      "Los primeros indicadores de mejora suelen verse entre el primer y segundo mes. El posicionamiento sólido y el crecimiento sostenido se consolidan a partir del tercer mes, cuando la estrategia está completamente implementada.",
   },
   {
-    question: "¿Ustedes crean todo el contenido?",
+    question: "¿Quién crea el contenido?",
     answer:
-      "Sí, nos encargamos de la creación completa del contenido: desde la estrategia y planificación, hasta el diseño gráfico, copywriting y producción de videos. Solo necesitamos tu aprobación final antes de publicar.",
+      "Nuestro equipo se encarga de todo el proceso creativo: estrategia, diseño visual, redacción y producción. Usted solo aprueba antes de publicar.",
   },
   {
-    question: "¿Gestionan mensajes y comentarios?",
+    question: "¿Incluye gestión de mensajes y comentarios?",
     answer:
-      "Sí, con el plan Pro incluimos Community Management completo. Esto incluye responder mensajes directos, comentarios y mantener activa la conversación con tu comunidad de manera profesional y alineada con tu marca.",
+      "Sí. Manejamos la interacción con su audiencia de manera profesional, manteniendo la voz y los valores de su marca en cada respuesta.",
   },
   {
-    question: "¿Trabajan con cualquier industria?",
+    question: "¿Con qué tipo de empresas trabajan?",
     answer:
-      "Trabajamos principalmente con empresas de servicios profesionales, clínicas, restaurantes, inmobiliarias, instituciones educativas y marcas locales en Costa Rica. Si tu negocio busca crecer en redes sociales, podemos ayudarte.",
+      "Trabajamos principalmente con empresas de servicios profesionales, clínicas, restaurantes, inmobiliarias e instituciones educativas. Si su negocio busca proyectar una imagen más profesional en digital, podemos ayudarle.",
   },
   {
-    question: "¿Qué necesito para empezar?",
+    question: "¿Qué necesito para comenzar?",
     answer:
-      "Solo necesitas agendar una llamada estratégica con nosotros. En esa llamada entenderemos tu negocio, objetivos y te presentaremos una propuesta personalizada. El onboarding completo toma aproximadamente una semana.",
+      "Solo una llamada de diagnóstico. En ella entendemos su negocio, objetivos y le presentamos una propuesta personalizada. El proceso de onboarding toma aproximadamente una semana.",
   },
 ];
 
@@ -36,12 +36,29 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="section-padding relative bg-[#030712]">
+    <section className="relative bg-[#030712] py-20 sm:py-28 lg:py-32">
       {/* Background */}
       <div className="bg-glow-static absolute inset-0 opacity-50" />
 
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6">
-        {/* Section Header */}
+      <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6">
+        {/* Social Proof Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-20 max-w-3xl text-center sm:mb-24"
+        >
+          <p className="text-sm font-medium tracking-wider text-[#3B82F6] uppercase">
+            Empresas que decidieron destacar
+          </p>
+          <h2 className="mt-4 text-[28px] leading-tight font-bold text-[#F9FAFB] sm:text-[36px] md:text-[42px]">
+            Ayudamos a marcas a proyectar una imagen más profesional,
+            consistente y confiable.
+          </h2>
+        </motion.div>
+
+        {/* FAQ Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,9 +66,12 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <h2 className="text-[32px] leading-tight font-bold text-[#F9FAFB] md:text-[40px] lg:text-[48px]">
+          <p className="text-sm font-medium tracking-wider text-[#3B82F6] uppercase">
             Preguntas Frecuentes
-          </h2>
+          </p>
+          <h3 className="mt-4 text-[24px] leading-tight font-bold text-[#F9FAFB] sm:text-[28px] md:text-[32px]">
+            Lo que necesita saber
+          </h3>
         </motion.div>
 
         {/* FAQ Accordion */}
@@ -60,9 +80,9 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mx-auto mt-16 max-w-3xl"
+          className="mx-auto mt-10 max-w-3xl sm:mt-14"
         >
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -76,9 +96,9 @@ export function FAQ() {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="flex w-full items-center justify-between px-6 py-5 text-left"
+                  className="flex w-full items-center justify-between px-5 py-4 text-left sm:px-6 sm:py-5"
                 >
-                  <span className="pr-4 text-lg font-medium text-[#F9FAFB]">
+                  <span className="pr-4 text-base font-medium text-[#F9FAFB] sm:text-lg">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -98,8 +118,8 @@ export function FAQ() {
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-5">
-                        <p className="leading-relaxed text-[#9CA3AF]">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6">
+                        <p className="text-sm leading-relaxed text-[#9CA3AF] sm:text-base">
                           {faq.answer}
                         </p>
                       </div>

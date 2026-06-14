@@ -9,10 +9,11 @@ import {
   Footer,
   WhatsAppButton,
 } from "@/features/landing";
+import { EntryGate } from "@/components/entry-gate";
 
 export default function Home() {
   return (
-    <>
+    <EntryGate>
       <Header />
       <main>
         <Hero />
@@ -24,6 +25,6 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
-    </>
+    </EntryGate>
   );
 }

@@ -216,7 +216,7 @@ export function EntryGate({ children }: EntryGateProps) {
                     HOLA
                   </motion.h1>
                   <motion.h2
-                    className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
+                    className="mb-10 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
@@ -226,14 +226,19 @@ export function EntryGate({ children }: EntryGateProps) {
                   </motion.h2>
 
                   {/* Subtitle */}
-                  <motion.p
-                    className="mb-10 text-lg text-[#9CA3AF] sm:text-xl"
+                  <motion.div
+                    className="mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
                   >
-                    Ayudamos a las marcas a destacar en un mundo lleno de ruido.
-                  </motion.p>
+                    <p className="text-lg text-[#9CA3AF] sm:text-xl">
+                      La mayoría de las empresas hace marketing.
+                    </p>
+                    <p className="mt-1 text-lg text-[#9CA3AF] sm:text-xl">
+                      Muy pocas logran ser recordadas.
+                    </p>
+                  </motion.div>
 
                   {/* Question */}
                   <motion.div
@@ -242,11 +247,8 @@ export function EntryGate({ children }: EntryGateProps) {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
                   >
-                    <p className="mb-2 text-base text-[#9CA3AF]/60">
-                      Pero antes de continuar:
-                    </p>
                     <p className="text-xl font-medium text-[#F9FAFB] sm:text-2xl">
-                      ¿Qué tipo de marketing está buscando?
+                      ¿Qué tipo de agencia está buscando?
                     </p>
                   </motion.div>
 
@@ -338,7 +340,7 @@ export function EntryGate({ children }: EntryGateProps) {
                 >
                   {/* All messages displayed together */}
                   <motion.p
-                    className="mb-4 text-2xl font-medium text-[#3B82F6] sm:text-3xl"
+                    className="mb-6 text-2xl font-medium text-[#3B82F6] sm:text-3xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.5 }}
@@ -347,25 +349,17 @@ export function EntryGate({ children }: EntryGateProps) {
                   </motion.p>
 
                   <motion.p
-                    className="mb-4 text-lg text-[#9CA3AF] sm:text-xl"
+                    className="mb-6 text-lg text-[#9CA3AF] sm:text-xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
                   >
-                    No creemos en fórmulas genéricas.
+                    Las marcas extraordinarias rara vez toman decisiones
+                    ordinarias.
                   </motion.p>
 
                   <motion.p
-                    className="mb-4 text-lg text-[#9CA3AF] sm:text-xl"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
-                  >
-                    Creemos en marcas que generan impacto.
-                  </motion.p>
-
-                  <motion.p
-                    className="mb-10 text-2xl font-bold text-[#F9FAFB] sm:text-3xl"
+                    className="mb-12 text-2xl font-bold text-[#F9FAFB] sm:text-3xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.5 }}
@@ -380,7 +374,7 @@ export function EntryGate({ children }: EntryGateProps) {
                     onClick={handleContinue}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.9, duration: 0.4 }}
+                    transition={{ delay: 1, duration: 0.4 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
                   >
