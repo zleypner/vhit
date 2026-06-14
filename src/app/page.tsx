@@ -4,7 +4,6 @@ import {
   Services,
   Process,
   WhyUs,
-  Pricing,
   FAQ,
   CTA,
   Footer,
@@ -20,7 +19,6 @@ export default function Home() {
         <Services />
         <Process />
         <WhyUs />
-        <Pricing />
         <FAQ />
         <CTA />
       </main>
