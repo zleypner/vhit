@@ -205,7 +205,7 @@ export function EntryGate({ children }: EntryGateProps) {
                 >
                   {/* Title */}
                   <motion.h1
-                    className="mb-2 text-4xl font-bold tracking-tight text-[#F9FAFB] sm:text-5xl md:text-6xl"
+                    className="mb-2 text-3xl font-bold tracking-tight text-[#F9FAFB] sm:text-5xl md:text-6xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
@@ -213,7 +213,7 @@ export function EntryGate({ children }: EntryGateProps) {
                     HOLA
                   </motion.h1>
                   <motion.h2
-                    className="mb-10 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
+                    className="mb-8 text-2xl font-bold tracking-tight sm:mb-10 sm:text-4xl md:text-5xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
@@ -224,27 +224,27 @@ export function EntryGate({ children }: EntryGateProps) {
 
                   {/* Subtitle */}
                   <motion.div
-                    className="mb-10"
+                    className="mb-8 sm:mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
                   >
-                    <p className="text-lg text-[#9CA3AF] sm:text-xl">
+                    <p className="text-base text-[#9CA3AF] sm:text-xl">
                       La mayoría de las empresas hace marketing.
                     </p>
-                    <p className="mt-1 text-lg text-[#9CA3AF] sm:text-xl">
+                    <p className="mt-1 text-base text-[#9CA3AF] sm:text-xl">
                       Muy pocas logran ser recordadas.
                     </p>
                   </motion.div>
 
                   {/* Question */}
                   <motion.div
-                    className="mb-10"
+                    className="mb-8 sm:mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
                   >
-                    <p className="text-xl font-medium text-[#F9FAFB] sm:text-2xl">
+                    <p className="text-lg font-medium text-[#F9FAFB] sm:text-2xl">
                       ¿Qué tipo de agencia está buscando?
                     </p>
                   </motion.div>
@@ -337,7 +337,7 @@ export function EntryGate({ children }: EntryGateProps) {
                 >
                   {/* All messages displayed together */}
                   <motion.p
-                    className="mb-6 text-2xl font-medium text-[#3B82F6] sm:text-3xl"
+                    className="mb-4 text-xl font-medium text-[#3B82F6] sm:mb-6 sm:text-3xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.5 }}
@@ -346,7 +346,7 @@ export function EntryGate({ children }: EntryGateProps) {
                   </motion.p>
 
                   <motion.p
-                    className="mb-6 text-lg text-[#9CA3AF] sm:text-xl"
+                    className="mb-4 text-base text-[#9CA3AF] sm:mb-6 sm:text-xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
@@ -356,7 +356,7 @@ export function EntryGate({ children }: EntryGateProps) {
                   </motion.p>
 
                   <motion.p
-                    className="mb-12 text-2xl font-bold text-[#F9FAFB] sm:text-3xl"
+                    className="mb-8 text-xl font-bold text-[#F9FAFB] sm:mb-12 sm:text-3xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.5 }}

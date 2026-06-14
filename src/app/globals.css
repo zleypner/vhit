@@ -120,7 +120,7 @@
   }
 
   body {
-    @apply min-h-screen bg-[#030712] text-[#F9FAFB];
+    @apply min-h-screen overflow-x-hidden bg-[#030712] text-[#F9FAFB];
   }
 }
 
