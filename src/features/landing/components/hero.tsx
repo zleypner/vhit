@@ -150,7 +150,7 @@ export function Hero() {
               {/* Image container */}
               <div className="relative overflow-hidden rounded-xl border border-[#3B82F6]/20 shadow-2xl shadow-[#3B82F6]/15 sm:rounded-2xl">
                 <Image
-                  src="/assets/images/recording-vh.png"
+                  src="/assets/images/hero-tech.jpg"
                   alt="Viral Hit - Posicionamiento Digital"
                   width={600}
                   height={400}
