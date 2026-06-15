@@ -183,7 +183,7 @@ export function EntryGate({ children }: EntryGateProps) {
         {!isExiting && (
           <motion.div
             ref={containerRef}
-            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#030712] px-6"
+            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#030712] px-4 sm:px-6"
             initial={{ opacity: 1 }}
             exit={{
               opacity: 0,
@@ -197,7 +197,7 @@ export function EntryGate({ children }: EntryGateProps) {
               {!sequenceStarted ? (
                 <motion.div
                   key="initial-content"
-                  className="flex max-w-2xl flex-col items-center text-center"
+                  className="flex w-full max-w-2xl flex-col items-center text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -205,7 +205,7 @@ export function EntryGate({ children }: EntryGateProps) {
                 >
                   {/* Title */}
                   <motion.h1
-                    className="mb-2 text-3xl font-bold tracking-tight text-[#F9FAFB] sm:text-5xl md:text-6xl"
+                    className="mb-2 text-[28px] font-bold tracking-tight text-[#F9FAFB] sm:text-5xl md:text-6xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
@@ -213,7 +213,7 @@ export function EntryGate({ children }: EntryGateProps) {
                     HOLA
                   </motion.h1>
                   <motion.h2
-                    className="mb-8 text-2xl font-bold tracking-tight sm:mb-10 sm:text-4xl md:text-5xl"
+                    className="mb-6 text-xl font-bold tracking-tight sm:mb-10 sm:text-4xl md:text-5xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
@@ -224,34 +224,34 @@ export function EntryGate({ children }: EntryGateProps) {
 
                   {/* Subtitle */}
                   <motion.div
-                    className="mb-8 sm:mb-10"
+                    className="mb-6 sm:mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
                   >
-                    <p className="text-base text-[#9CA3AF] sm:text-xl">
+                    <p className="text-[15px] leading-relaxed text-[#9CA3AF] sm:text-xl">
                       La mayoría de las empresas hace marketing.
                     </p>
-                    <p className="mt-1 text-base text-[#9CA3AF] sm:text-xl">
+                    <p className="mt-1 text-[15px] leading-relaxed text-[#9CA3AF] sm:text-xl">
                       Muy pocas logran ser recordadas.
                     </p>
                   </motion.div>
 
                   {/* Question */}
                   <motion.div
-                    className="mb-8 sm:mb-10"
+                    className="mb-6 sm:mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
                   >
-                    <p className="text-lg font-medium text-[#F9FAFB] sm:text-2xl">
+                    <p className="text-base font-medium text-[#F9FAFB] sm:text-2xl">
                       ¿Qué tipo de agencia está buscando?
                     </p>
                   </motion.div>
 
                   {/* Buttons */}
                   <motion.div
-                    className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6"
+                    className="flex w-full max-w-xs flex-col items-center gap-3 sm:max-w-none sm:flex-row sm:gap-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.6 }}
@@ -261,7 +261,7 @@ export function EntryGate({ children }: EntryGateProps) {
                       {!buttonFlownAway && (
                         <motion.button
                           ref={buttonRef}
-                          className="rounded-full border-2 border-[#3B82F6] bg-transparent px-6 py-3 text-sm font-medium text-[#3B82F6] transition-colors hover:bg-[#3B82F6] hover:text-white sm:px-8 sm:text-base"
+                          className="w-full rounded-full border-2 border-[#3B82F6] bg-transparent px-6 py-2.5 text-sm font-medium text-[#3B82F6] transition-colors hover:bg-[#3B82F6] hover:text-white sm:w-auto sm:px-8 sm:py-3 sm:text-base"
                           animate={{
                             x: buttonPosition.x,
                             y: buttonPosition.y,
@@ -293,7 +293,7 @@ export function EntryGate({ children }: EntryGateProps) {
                     {/* Main CTA Button - Atípica (Gray, turns Blue when Típica flies away) */}
                     <motion.button
                       ref={atipicaButtonRef}
-                      className={`group relative rounded-full border-2 px-6 py-3 text-sm font-medium transition-all sm:px-8 sm:text-base ${
+                      className={`group relative w-full rounded-full border-2 px-6 py-2.5 text-sm font-medium transition-all sm:w-auto sm:px-8 sm:py-3 sm:text-base ${
                         buttonFlownAway
                           ? "border-[#3B82F6] bg-transparent text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white"
                           : "border-[#9CA3AF]/40 bg-transparent text-[#9CA3AF] hover:border-[#9CA3AF] hover:text-[#F9FAFB]"
@@ -330,14 +330,14 @@ export function EntryGate({ children }: EntryGateProps) {
               ) : (
                 <motion.div
                   key="sequence-content"
-                  className="flex max-w-2xl flex-col items-center text-center"
+                  className="flex w-full max-w-2xl flex-col items-center px-2 text-center"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                   {/* All messages displayed together */}
                   <motion.p
-                    className="mb-4 text-xl font-medium text-[#3B82F6] sm:mb-6 sm:text-3xl"
+                    className="mb-3 text-lg font-medium text-[#3B82F6] sm:mb-6 sm:text-3xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.5 }}
@@ -346,7 +346,7 @@ export function EntryGate({ children }: EntryGateProps) {
                   </motion.p>
 
                   <motion.p
-                    className="mb-4 text-base text-[#9CA3AF] sm:mb-6 sm:text-xl"
+                    className="mb-3 text-[15px] leading-relaxed text-[#9CA3AF] sm:mb-6 sm:text-xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
@@ -356,7 +356,7 @@ export function EntryGate({ children }: EntryGateProps) {
                   </motion.p>
 
                   <motion.p
-                    className="mb-8 text-xl font-bold text-[#F9FAFB] sm:mb-12 sm:text-3xl"
+                    className="mb-6 text-lg font-bold text-[#F9FAFB] sm:mb-12 sm:text-3xl"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.5 }}
@@ -367,7 +367,7 @@ export function EntryGate({ children }: EntryGateProps) {
 
                   {/* Continue button */}
                   <motion.button
-                    className="rounded-full border-2 border-[#3B82F6] bg-[#3B82F6] px-8 py-3 text-base font-medium text-white transition-all hover:bg-transparent hover:text-[#3B82F6] sm:px-10"
+                    className="w-full max-w-xs rounded-full border-2 border-[#3B82F6] bg-[#3B82F6] px-8 py-2.5 text-[15px] font-medium text-white transition-all hover:bg-transparent hover:text-[#3B82F6] sm:w-auto sm:px-10 sm:py-3 sm:text-base"
                     onClick={handleContinue}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}

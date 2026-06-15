@@ -14,7 +14,7 @@ export function CTA() {
   return (
     <section
       id="contacto"
-      className="relative bg-[#0F172A] py-20 sm:py-28 lg:py-32"
+      className="relative bg-[#0F172A] py-16 sm:py-28 lg:py-32"
     >
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -32,33 +32,33 @@ export function CTA() {
           className="relative"
         >
           {/* Card */}
-          <div className="relative overflow-hidden rounded-2xl border border-[#1F2937] bg-[#111827]/80 p-8 sm:rounded-3xl sm:p-12 lg:p-20">
+          <div className="relative overflow-hidden rounded-2xl border border-[#1F2937] bg-[#111827]/80 p-6 sm:rounded-3xl sm:p-12 lg:p-20">
             {/* Inner glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/5 via-transparent to-[#60A5FA]/5" />
 
             {/* Content */}
             <div className="relative mx-auto max-w-3xl text-center">
-              <h2 className="text-[28px] leading-tight font-bold text-[#F9FAFB] sm:text-[36px] md:text-[42px]">
+              <h2 className="text-[22px] leading-tight font-bold text-[#F9FAFB] sm:text-[36px] md:text-[42px]">
                 Su próxima publicación no debería ser improvisada.
               </h2>
 
-              <p className="mt-6 text-base leading-relaxed text-[#9CA3AF] sm:mt-8 sm:text-lg md:text-xl">
+              <p className="mt-4 text-[15px] leading-relaxed text-[#9CA3AF] sm:mt-8 sm:text-lg md:text-xl">
                 Convierta sus redes sociales en una herramienta de
                 posicionamiento y crecimiento para su empresa.
               </p>
 
               {/* Button */}
-              <div className="mt-10 flex justify-center sm:mt-12">
+              <div className="mt-6 flex justify-center sm:mt-12">
                 <a
                   href="https://wa.me/50612345678"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#3B82F6] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2563EB] hover:shadow-xl hover:shadow-[#3B82F6]/30 sm:px-10 sm:py-5 sm:text-lg"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#3B82F6] px-6 py-3 text-[15px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2563EB] hover:shadow-xl hover:shadow-[#3B82F6]/30 sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
                 >
                   Solicitar Diagnóstico
                   <ArrowRight
-                    size={20}
-                    className="transition-transform group-hover:translate-x-1"
+                    size={18}
+                    className="flex-shrink-0 transition-transform group-hover:translate-x-1 sm:h-5 sm:w-5"
                   />
                 </a>
               </div>

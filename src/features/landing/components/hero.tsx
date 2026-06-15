@@ -40,8 +40,8 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1280px] px-4 pt-28 pb-20 sm:px-6 sm:pt-[180px] sm:pb-[140px]">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-4 pt-24 pb-16 sm:px-6 sm:pt-[180px] sm:pb-[140px]">
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Text */}
           <div className="max-w-2xl">
             {/* Badge */}
@@ -61,7 +61,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-6 text-[28px] leading-[1.15] font-bold tracking-tight sm:mt-8 sm:text-[36px] md:text-[44px] lg:text-[52px]"
+              className="mt-5 text-[26px] leading-[1.2] font-bold tracking-tight sm:mt-8 sm:text-[36px] md:text-[44px] lg:text-[52px]"
             >
               <span className="text-[#F9FAFB]">
                 Su empresa ya hace un gran trabajo.
@@ -89,7 +89,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
+              className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
             >
               <a
                 href="#contacto"
@@ -97,12 +97,12 @@ export function Hero() {
                   e.preventDefault();
                   handleNavClick("#contacto");
                 }}
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#3B82F6] px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#3B82F6]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2563EB] hover:shadow-xl hover:shadow-[#3B82F6]/35 sm:px-7 sm:py-4"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#3B82F6] px-5 py-3 text-[15px] font-semibold text-white shadow-lg shadow-[#3B82F6]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2563EB] hover:shadow-xl hover:shadow-[#3B82F6]/35 sm:px-7 sm:py-4 sm:text-base"
               >
                 Agendar Diagnóstico
                 <ArrowRight
                   size={18}
-                  className="transition-transform group-hover:translate-x-1"
+                  className="flex-shrink-0 transition-transform group-hover:translate-x-1"
                 />
               </a>
               <a
@@ -111,7 +111,7 @@ export function Hero() {
                   e.preventDefault();
                   handleNavClick("#portafolio");
                 }}
-                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#1F2937] bg-[#1F2937]/60 px-6 py-3.5 text-base font-semibold text-[#F9FAFB] transition-all duration-300 hover:border-[#3B82F6]/50 hover:bg-[#3B82F6]/10 sm:px-7 sm:py-4"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#1F2937] bg-[#1F2937]/60 px-5 py-3 text-[15px] font-semibold text-[#F9FAFB] transition-all duration-300 hover:border-[#3B82F6]/50 hover:bg-[#3B82F6]/10 sm:px-7 sm:py-4 sm:text-base"
               >
                 Ver Nuestro Trabajo
               </a>
@@ -122,14 +122,17 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="mt-10 flex flex-wrap gap-x-6 gap-y-3 sm:mt-14"
+              className="mt-8 flex flex-col gap-2.5 sm:mt-14 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-3"
             >
               {trustIndicators.map((indicator) => (
                 <div
                   key={indicator}
-                  className="flex items-center gap-2 text-sm text-[#9CA3AF]"
+                  className="flex items-center gap-2 text-[13px] text-[#9CA3AF] sm:text-sm"
                 >
-                  <Check size={16} className="flex-shrink-0 text-[#3B82F6]" />
+                  <Check
+                    size={14}
+                    className="flex-shrink-0 text-[#3B82F6] sm:h-4 sm:w-4"
+                  />
                   {indicator}
                 </div>
               ))}

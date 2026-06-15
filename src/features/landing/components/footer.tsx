@@ -20,8 +20,8 @@ export function Footer() {
 
   return (
     <footer className="relative border-t border-[#1F2937] bg-[#030712]">
-      <div className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-20 lg:py-24">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-12 lg:gap-8">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -31,12 +31,14 @@ export function Footer() {
             className="lg:col-span-5"
           >
             <a href="#inicio" className="inline-flex items-center gap-2">
-              <span className="text-xl font-bold text-[#F9FAFB]">
+              <span className="text-lg font-bold text-[#F9FAFB] sm:text-xl">
                 Viral Hit
               </span>
-              <span className="text-xl font-light text-[#60A5FA]">Agency</span>
+              <span className="text-lg font-light text-[#60A5FA] sm:text-xl">
+                Agency
+              </span>
             </a>
-            <p className="mt-4 max-w-sm text-base leading-relaxed text-[#9CA3AF]">
+            <p className="mt-3 max-w-sm text-[14px] leading-relaxed text-[#9CA3AF] sm:mt-4 sm:text-base">
               Construimos presencia digital para empresas que entienden el valor
               de ser recordadas.
             </p>
@@ -48,10 +50,10 @@ export function Footer() {
                 e.preventDefault();
                 handleNavClick("#contacto");
               }}
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#3B82F6] transition-colors hover:text-[#60A5FA]"
+              className="mt-4 inline-flex items-center gap-2 text-[13px] font-medium text-[#3B82F6] transition-colors hover:text-[#60A5FA] sm:mt-6 sm:text-sm"
             >
               Solicitar diagnóstico
-              <ArrowUpRight size={16} />
+              <ArrowUpRight size={14} className="sm:h-4 sm:w-4" />
             </a>
           </motion.div>
 
@@ -63,10 +65,10 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-3"
           >
-            <h4 className="text-sm font-semibold tracking-wider text-[#F9FAFB] uppercase">
+            <h4 className="text-xs font-semibold tracking-wider text-[#F9FAFB] uppercase sm:text-sm">
               Navegación
             </h4>
-            <nav className="mt-5 flex flex-col gap-3">
+            <nav className="mt-3 flex flex-col gap-2.5 sm:mt-5 sm:gap-3">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -75,7 +77,7 @@ export function Footer() {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className="text-[#9CA3AF] transition-colors hover:text-[#F9FAFB]"
+                  className="text-[14px] text-[#9CA3AF] transition-colors hover:text-[#F9FAFB] sm:text-base"
                 >
                   {link.label}
                 </a>
@@ -91,22 +93,28 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-4"
           >
-            <h4 className="text-sm font-semibold tracking-wider text-[#F9FAFB] uppercase">
+            <h4 className="text-xs font-semibold tracking-wider text-[#F9FAFB] uppercase sm:text-sm">
               Contacto
             </h4>
-            <div className="mt-5 space-y-4">
+            <div className="mt-3 space-y-3 sm:mt-5 sm:space-y-4">
               {/* Email */}
               <a
                 href="mailto:hola@viralhitagency.com"
-                className="flex items-center gap-3 text-[#9CA3AF] transition-colors hover:text-[#60A5FA]"
+                className="flex items-center gap-2.5 text-[14px] text-[#9CA3AF] transition-colors hover:text-[#60A5FA] sm:gap-3 sm:text-base"
               >
-                <Mail size={18} className="flex-shrink-0 text-[#60A5FA]" />
+                <Mail
+                  size={16}
+                  className="flex-shrink-0 text-[#60A5FA] sm:h-[18px] sm:w-[18px]"
+                />
                 hola@viralhitagency.com
               </a>
 
               {/* Location */}
-              <div className="flex items-center gap-3 text-[#9CA3AF]">
-                <MapPin size={18} className="flex-shrink-0 text-[#60A5FA]" />
+              <div className="flex items-center gap-2.5 text-[14px] text-[#9CA3AF] sm:gap-3 sm:text-base">
+                <MapPin
+                  size={16}
+                  className="flex-shrink-0 text-[#60A5FA] sm:h-[18px] sm:w-[18px]"
+                />
                 Costa Rica
               </div>
             </div>
@@ -119,12 +127,12 @@ export function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[#1F2937] pt-8 sm:flex-row"
+          className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-[#1F2937] pt-6 sm:mt-16 sm:flex-row sm:gap-4 sm:pt-8"
         >
-          <p className="text-sm text-[#9CA3AF]">
+          <p className="text-xs text-[#9CA3AF] sm:text-sm">
             © {new Date().getFullYear()} Viral Hit Agency
           </p>
-          <p className="text-sm text-[#9CA3AF]/60">
+          <p className="text-center text-xs text-[#9CA3AF]/60 sm:text-sm">
             Posicionamiento digital para marcas que quieren ser recordadas.
           </p>
         </motion.div>
