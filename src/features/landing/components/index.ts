@@ -1,7 +1,10 @@
 export { Header } from "./header";
 export { Hero } from "./hero";
+export { ValueIntro } from "./value-intro";
 export { Services } from "./services";
+export { Differentiator } from "./differentiator";
 export { Process } from "./process";
+export { ValueCards } from "./value-cards";
 export { WhyUs } from "./why-us";
 export { FAQ } from "./faq";
 export { CTA } from "./cta";

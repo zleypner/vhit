@@ -1,8 +1,11 @@
 import {
   Header,
   Hero,
+  ValueIntro,
   Services,
+  Differentiator,
   Process,
+  ValueCards,
   WhyUs,
   FAQ,
   CTA,
@@ -17,8 +20,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <ValueIntro />
         <Services />
+        <Differentiator />
         <Process />
+        <ValueCards />
         <WhyUs />
         <FAQ />
         <CTA />
