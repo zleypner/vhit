@@ -278,11 +278,8 @@ export function EntryGate({ children }: EntryGateProps) {
                             stiffness: 300,
                             damping: 20,
                           }}
-                          onMouseEnter={(e) => escapeButton(e)}
-                          onTouchStart={(e) => {
-                            e.preventDefault();
-                            escapeButton(e);
-                          }}
+                          onMouseEnter={() => setButtonFlownAway(true)}
+                          onTouchStart={() => setButtonFlownAway(true)}
                           onClick={() => setButtonFlownAway(true)}
                         >
                           Típica
