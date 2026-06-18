@@ -283,7 +283,7 @@ export function EntryGate({ children }: EntryGateProps) {
                             e.preventDefault();
                             escapeButton(e);
                           }}
-                          onClick={(e) => escapeButton(e)}
+                          onClick={() => setButtonFlownAway(true)}
                         >
                           Típica
                         </motion.button>
